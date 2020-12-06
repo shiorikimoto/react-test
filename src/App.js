@@ -6,12 +6,12 @@ import List from './List'
 const App = () => {
     return (
       
-      <React.Fragment>
+      <>
         <h1>Todo App</h1>
         <Title />
         <Form />
         <List />
-      </React.Fragment>
+      </>
     )
 }
 
