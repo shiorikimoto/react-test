@@ -1,14 +1,13 @@
 import React from 'react'
 import Item from './Item'
 
-const List = () => {
+const List = ({ todos }) => {
     return (
-        <>
-            <h1>List</h1>
-            <Item />
-            <Item />
-        </>
-        
+        <ul>
+            <Item content={todos[0].content} />
+            <Item content={todos[1].content} />
+            <Item content={todos[2].content} />
+        </ul>
     )
 }
 
