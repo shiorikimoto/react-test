@@ -13,6 +13,9 @@ const App = () => {
       },
       {
           content: '電話をする'
+      },
+      {
+          content: '電話をしない'
       }
   ]
 
