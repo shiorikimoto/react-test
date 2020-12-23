@@ -1,7 +1,10 @@
 import React from 'react'
 
-const Item = ({ content }) => {
+const Item = ({ content, id, deleteTodo }) => {
     const [isDone, setIsDone] = React.useState(false)
+    const handleDelete = () => {
+        deleteTodo(id)
+    }
 
     return (
         <li>
@@ -11,6 +14,7 @@ const Item = ({ content }) => {
             <span style={
                 {textDecoration: isDone ? 'line-through' : 'none'}
             }>{content}</span>
+            <button onClick={handleDelete}>削除</button>
         </li>
     )
 }
