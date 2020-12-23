@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Title from './Title'
 import Form from './Form'
 import List from './List'
-//import shortid from 'shortid'
+import shortid from 'shortid'
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -23,13 +23,13 @@ const App = () => {
         ...todos,
         {
             content: content,
-            //id: shortid.generate()
+            id: shortid.generate()
         }
     ])
   
-  //const deleteTodo = id => {
-  //  setTodos(todos.filter(todo => todo.id !== id))
-  //}
+  const deleteTodo = id => {
+    setTodos(todos.filter(todo => todo.id !== id))
+  }
 }
 
 
