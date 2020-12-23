@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Form = ({ addTodo }) => {
+const Form = ({ todos, setTodos }) => {
     const [moji, setMoji] = useState('')
 
     const handleSubmit = e => {
