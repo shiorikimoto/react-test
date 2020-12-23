@@ -1,19 +1,26 @@
 import React, { useState } from 'react'
 
 const Form = ({ addTodo }) => {
-    const [value, setValue] = useState('')
+    const [moji, setMoji] = useState('')
 
     const handleSubmit = e => {
         e.preventDefault()
-        addTodo(value)
+        setTodos([
+            ...todos,
+            {
+                content: moji
+            }
+        ])
+        setMoji('')
     }
 
     return (
         <form onSubmit={handleSubmit}>
             <input 
             type='text'
+            value={moji}
             onChange={e => {
-                setValue(e.target.value)
+                setMoji(e.target.value)
             }}
 />
         </form>
