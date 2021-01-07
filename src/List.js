@@ -11,6 +11,7 @@ const List = ({ todos, deleteTodo }) => {
                             content={todo.content} 
                             id={todo.id}
                             key={todo.id}
+                            deleteTodo={deleteTodo}
                         />
                     )
                 })
