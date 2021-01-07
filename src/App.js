@@ -1,18 +1,22 @@
 import React, { useState } from 'react'
-import Title from './Title'
 import Form from './Form'
 import List from './List'
+import shortid from 'shortid'
 
 const App = () => {
   const [todos, setTodos] = useState([
     {
-      content: '課題をする'
+      content: '課題をする',
+      id: 1
     },
     {
-      content: '洗濯をする'
+      content: '洗濯をする',
+      id: 2
+
     },
     {
-      content: '電話をする'
+      content: '電話をする',
+      id: 3
     }
 
   ])
@@ -22,6 +26,7 @@ const App = () => {
       ...todos,
       {
         content: content,
+        id: shortid.generate()
       }
     ])
 
@@ -34,7 +39,7 @@ const App = () => {
   return (
     <>
       <h1>Todo App</h1>
-      <Form todos={todos} setTodos={setTodos} />
+      <Form addTodo={addTodo} />
       <List todos={todos} deleteTodo={deleteTodo} />
     </>
   )
