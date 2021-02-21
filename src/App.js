@@ -7,7 +7,7 @@ const App = () => {
   const [todos, setTodos] = useState([
     {
       content: '課題をする',
-      id: 1
+      id: 1//ID指定
     },
     {
       content: '洗濯をする',
@@ -26,7 +26,7 @@ const App = () => {
       ...todos,
       {
         content: content,
-        id: shortid.generate()
+        id: shortid.generate()//ランダムにid keyつける
       }
     ])
 
@@ -34,7 +34,7 @@ const App = () => {
 
   const deleteTodo = id => {
     setTodos(todos.filter(todo => todo.id !== id))
-  }
+  }//指定したIdついたの消す
 
   return (
     <>

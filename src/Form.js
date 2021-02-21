@@ -4,14 +4,14 @@ const Form = ({ addTodo }) => {
     const [moji, setMoji] = useState('')
 
     const handleSubmit = e => {
-        e.preventDefault()
+        e.preventDefault()//エンター押したあとの勝手な更新とめる
 
         if (!moji) {
             alert('何も入力していません')
         } else {
             addTodo(moji)
         }
-        setMoji('')
+        setMoji('')//フォームを空欄（' '）にする処理
     }
 
     return (
