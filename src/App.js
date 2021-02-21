@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Form from './Form'
 import List from './List'
-import shortid from 'shortid'
+import nanoid from 'nanoid'
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -26,7 +26,7 @@ const App = () => {
       ...todos,
       {
         content: content,
-        id: shortid.generate()//ランダムにid keyつける
+        id: nanoid()//ランダムにid keyつける
       }
     ])
 
